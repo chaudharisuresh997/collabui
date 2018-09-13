@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="addItem">
+  <input [(ngModel)]="newBank" class="bank">
+  <button (click) = "addToList()"></button>
+  </div>
+  
+  <ul>
+  <li *ngFor="let bankName of bankNames;let i=index">
+  {{ bankName }}
+  <span (click) = "removeToList(i)">X</span></li>
+  </ul>
+  </div>
